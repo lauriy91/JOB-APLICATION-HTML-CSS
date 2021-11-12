@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Sección botón idiomas -->
+    <!-- <div class="header">
+        <div class="header_bg">            
+            <div class="language_select">
+                <label>Idioma</label>
+                <select id="language_select" name="language_select">
+                    <option value="101">English (United States)</option>
+                    <option value="104" selected="selected">Español (España)</option>
+                </select>
+            </div>  
+        </div>
+    </div> -->
+
+    <!-- Usamos la etiqueta form para indicarle a nuestro código la construcción de un formulario -->
+    <form class="form">
+
+        <div class="logo">
+        <img src="data:image/png;base64,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">
+        </div>
+
+        <h1 class="form_title">Solicitud de empleo</h1>
+
+        <div class="form_container_infoContact">
+            <p class="form_section_titleInfoContact">Información de contacto</p>
+            <div class="form_group">
+                <input type="text" id="name" class="form_input" placeholder=" ">
+                <label for="name" class="form_label"> Nombre: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <input type="text" id="secondName" class="form_input" placeholder=" ">
+                <label for="secondName" class="form_label"> Segundo nombre: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <input type="text" id="lastName" class="form_input" placeholder=" ">
+                <label for="lastName" class="form_label"> Apellido: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <input type="text" id="secondLastName" class="form_input" placeholder=" ">
+                <label for="secondLastName" class="form_label"> Segundo apellido: </label>
+                <span class="form_line"></span>
+            </div>
+            <!-- HACER DESPLEGABLE -->
+            <div class="form_group">
+                <input type="text" id="country" class="form_input" placeholder=" ">
+                <label for="country" class="form_label"> País: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <input type="text" id="direction" class="form_input" placeholder=" ">
+                <label for="direction" class="form_label"> Dirección: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <input type="number" id="postalCode" class="form_input" placeholder=" ">
+                <label for="postalCode" class="form_label"> Código Postal: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <input type="text" id="city" class="form_input" placeholder=" ">
+                <label for="city" class="form_label"> Ciudad: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <input type="text" id="state" class="form_input" placeholder=" ">
+                <label for="state" class="form_label"> Estado: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <select name="OS" id="id_type" class="form_input" placeholder=" " style="color: black;">
+                    <option selected value="0"> Tipo de identificación: </option>
+                        <option value="1">Cédula</option> 
+                        <option value="2">Pasaporte</option>
+                        <option value="2">Visa</option> 
+                 </select>
+            </div>
+            <div class="form_group">
+                <input type="text" id="id_number" class="form_input" placeholder=" ">
+                <label for="id_number" class="form_label"> Número de identificación: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <input type="date" id="date_born" class="form_input" placeholder=" " style="color: black;">
+                <label for="date_born" class="form_label"> Fecha de nacimiento: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <select name="OS" id="gender" class="form_input" placeholder=" " style="color: black;">
+                    <option selected value="0"> Género: </option>
+                        <option value="1">F</option> 
+                        <option value="2">M</option> 
+                 </select>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <select name="OS" id="civil_status" class="form_input" placeholder=" " style="color: black;">
+                    <option selected value="0"> Estado civil: </option>
+                        <option value="1">Soltero/a</option> 
+                        <option value="2">Casado/a</option>
+                        <option value="2">Viudo/a</option> 
+                 </select>
+            </div>
+            <div class="form_group">
+                <select name="OS" id="contact_options" class="form_input" placeholder=" " style="color: black;">
+                    <option selected value="0"> Opciones de contacto: </option>
+                        <option value="1">Celular</option> 
+                        <option value="2">Correo</option>
+                        <option value="2">Empresa</option> 
+                 </select>
+            </div>
+            <div class="form_group">
+                <input type="tel" id="number_phone" class="form_input" placeholder=" ">
+                <label for="number_phone" class="form_label"> Número de teléfono: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <input type="text" id="other_contact" class="form_input" placeholder=" ">
+                <label for="other_contact" class="form_label"> Otra opción de contacto: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <input type="tel" id="second_number_phone" class="form_input" placeholder=" ">
+                <label for="second_number_phone" class="form_label"> Número de teléfono secundario: </label>
+                <span class="form_line"></span>
+            </div>
+            <div class="form_group">
+                <input type="email" id="email" class="form_input" placeholder=" ">
+                <label for="email" class="form_label"> Email: </label>
+                <span class="form_line"></span>
+            </div>
+
+            <br><br><br>
+            <p class="form_section_titleInfoContact">Declaración del candidato</p>
+
+            <p class="declaracion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam non earum iste minima perferendis possimus laborum porro! Repellendus ullam, similique sapiente cupiditate necessitatibus ea veniam nesciunt dolorem? Libero, perferendis autem.</p>
+            
+            <br><br>
+            <input type="submit" class="form_submit" value="Presentar solicitud">
+        </div>
+    </form>
+    
+</body>
+</html>
